@@ -5,7 +5,7 @@ import { City, Filters, CardItem } from "../components";
 import styles from "../assets/styles";
 import DEMO from "../assets/data/demo";
 
-const Home = () => {
+const Watch = () => {
   const [swiper, setSwiper] = useState<CardStack | null>(null);
 
   return (
@@ -16,7 +16,6 @@ const Home = () => {
       <View style={styles.containerHome}>
         <View style={styles.top}>
           <City />
-          <Filters />
           <Filters />
         </View>
 
@@ -43,4 +42,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Watch;

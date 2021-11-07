@@ -5,6 +5,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home, Matches, Messages, Profile } from "./screens";
 import { PRIMARY_COLOR, DARK_GRAY, BLACK, WHITE } from "./assets/styles";
 import TabBarIcon from "./components/TabBarIcon";
+import Watch from "./screens/Watch";
+import Play from "./screens/Play";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -39,56 +41,56 @@ const App = () => (
             }}
           >
             <Tab.Screen
-              name="Explore"
+              name="Read"
               component={Home}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
                     focused={focused}
                     iconName="search"
-                    text="Explore"
+                    text="Read"
                   />
                 ),
               }}
             />
 
             <Tab.Screen
-              name="Matches"
-              component={Matches}
+              name="Watch"
+              component={Watch}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
                     focused={focused}
                     iconName="heart"
-                    text="Matches"
+                    text="Watch"
                   />
                 ),
               }}
             />
 
             <Tab.Screen
-              name="Chat"
-              component={Messages}
+              name="Play"
+              component={Play}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
                     focused={focused}
                     iconName="chatbubble"
-                    text="Chat"
+                    text="Play"
                   />
                 ),
               }}
             />
 
             <Tab.Screen
-              name="Profile"
+              name="Settings"
               component={Profile}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
                     focused={focused}
                     iconName="person"
-                    text="Profile"
+                    text="Settings"
                   />
                 ),
               }}
