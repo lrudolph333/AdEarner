@@ -46,6 +46,7 @@ const CardItem = ({
       <Image source={image} style={imageStyle} />
 
       {/* MATCHES */}
+      {/*TODO: make this into a "Special promo" button, for some ads*/}
       {matches && (
         <View style={styles.matchesCardItem}>
           <Text style={styles.matchesTextCardItem}>
@@ -54,13 +55,13 @@ const CardItem = ({
         </View>
       )}
 
-      {/* NAME */}
-      <Text style={nameStyle}>{name}</Text>
+      {/*/!* NAME *!/*/}
+      {/*<Text style={nameStyle}>{name}</Text>*/}
 
-      {/* DESCRIPTION */}
-      {description && (
-        <Text style={styles.descriptionCardItem}>{description}</Text>
-      )}
+      {/*/!* DESCRIPTION *!/*/}
+      {/*{description && (*/}
+      {/*  <Text style={styles.descriptionCardItem}>{description}</Text>*/}
+      {/*)}*/}
 
       {/* STATUS */}
       {!description && (
@@ -75,21 +76,23 @@ const CardItem = ({
       {/* ACTIONS */}
       {hasActions && (
         <View style={styles.actionsCardItem}>
-          <TouchableOpacity style={styles.miniButton}>
-            <Icon name="star" color={STAR_ACTIONS} size={14} />
-          </TouchableOpacity>
+          {/*<TouchableOpacity style={styles.miniButton}>*/}
+          {/*  <Icon name="star" color={STAR_ACTIONS} size={14} />*/}
+          {/*</TouchableOpacity>*/}
 
           <TouchableOpacity style={styles.button}>
             <Icon name="heart" color={LIKE_ACTIONS} size={25} />
           </TouchableOpacity>
-
+          <TouchableOpacity style={styles.button}>
+            <Icon name="information-outline" color={DISLIKE_ACTIONS} size={25} />
+          </TouchableOpacity>
           <TouchableOpacity style={styles.button}>
             <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.miniButton}>
-            <Icon name="flash" color={FLASH_ACTIONS} size={14} />
-          </TouchableOpacity>
+          {/*<TouchableOpacity style={styles.miniButton}>*/}
+          {/*  <Icon name="flash" color={FLASH_ACTIONS} size={14} />*/}
+          {/*</TouchableOpacity>*/}
         </View>
       )}
     </View>
